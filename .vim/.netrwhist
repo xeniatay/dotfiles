@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/Users/xenia.tay/code/firebird/static/dev/scripts'
+let g:netrw_dirhist_2='/Users/xenia.tay/code/firebird/static/dev/scripts/util'
+let g:netrw_dirhist_3='/Users/xenia.tay/code/firebird/static/dev/scripts/bv/ugc/model'
+let g:netrw_dirhist_4='/Users/xenia.tay/code/firebird/static/dev/scripts/bv/ugc/feature'
+let g:netrw_dirhist_5='/Users/xenia.tay/code/firebird/static/dev/scripts/bv/ugc/feature/view'
+let g:netrw_dirhist_6='/Users/xenia.tay/code/firebird/static/dev'
