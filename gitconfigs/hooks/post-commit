@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+hash=`git rev-parse HEAD`.strip!
+file="/Users/xenia.tay/Dropbox/Firebird/Gitshots/#{Time.now.to_i}-#{hash}.jpg"
+puts "Make a FUNNY FACE ->  #{file}"
+system "imagesnap -q -w 0 #{file}"
+exit 0

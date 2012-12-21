@@ -21,3 +21,54 @@
 .oh-my-zsh/lib
 .oh-my-zsh/log
 .zsh_history
+.viminfo
+
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+*.iml
+
+# OS or Editor folders
+.DS_Store
+.cache
+.project
+.settings
+nbproject
+Thumbs.db
+
+# Dreamweaver added files
+_notes
+dwsync.xml
+
+# Komodo
+*.komodoproject
+.komodotools
+
+# Folders to ignore
+.hg
+.svn
+intermediate
+publish
+.idea
+
+# node-cover
+.coverage_data
+.coverage_debug
+cover_html
+
+.vagrant
+*.sublime-*
+
+# Sublime PlainTasks
+TODO
+
+# TextMate 2 project settings
+.tm_properties
