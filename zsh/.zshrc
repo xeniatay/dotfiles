@@ -29,10 +29,20 @@ plugins=(rails git osx ruby brew gem grunt)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/bin:/usr/local/sbin:/Users/xenia.tay/.nave/installed/0.6.11/bin:$PATH;
+pathdirs=(
+    /usr/local/bin
+    /usr/local/sbin
+    /Users/Xenia.Tay/.nave/installed/0.6.11/bin
+    ~/bin
+)
+for dir in $pathdirs; do
+    if [ -d $dir ]; then
+        path+=$dir
+    fi
+done
 
 #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
-. `brew --prefix`/etc/profile.d/z.sh
+#. `brew --prefix`/etc/profile.d/z.sh
 
 # Ignore autocorrect for certain comands
 if [ -f ~/.zsh_nocorrect ]; then
@@ -52,3 +62,10 @@ zstyle ':completion:*' menu select
 __git_files () { 
     _wanted files expl 'local files' _files     
 }
+
+alias restart-couch='/usr/bin/sudo launchctl stop org.apache.couchdb'
+alias start-couch='/usr/bin/sudo launchctl load -w /Library/LaunchDaemons/org.apache.couchdb.plist'
+alias stop-couch='/usr/bin/sudo launchctl unload /Library/LaunchDaemons/org.apache.couchdb.plist'
+
+# deploy indochino
+# cap <servername> -S branch="<branchname>" deploy
