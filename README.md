@@ -1,30 +1,25 @@
 # configurations
 
 ##dotfiles
-`cp vim/dotfiles/* ~/`
-
-`cp git/dotfiles/* ~/`
-
-`cp zsh/dotfiles/* ~/`
-
-`cp bash/dotfiles/* ~/`
+    cp vim/dotfiles/* ~/; \
+    cp git/dotfiles/* ~/; \
+    cp zsh/dotfiles/* ~/; \
+    cp bash/dotfiles/* ~/; 
 
 ## Vim
 ### Install [Pathogen](https://github.com/tpope/vim-pathogen)
 Copypasta the following:
-` mkdir -p ~/.vim/autoload ~/.vim/bundle; \ 
 
-  curl -Sso ~/.vim/autoload/pathogen.vim \
+    mkdir -p ~/.vim/autoload ~/.vim/bundle; \
+    curl -Sso ~/.vim/autoload/pathogen.vim \
+        https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim >
 
-  https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim > `
-
-`cp -rvi vim/dotvim_directory/* ~/.vim/`
+    cp -rvi vim/dotvim_directory/* ~/.vim/
 
 ### Plugins (should be installed by copying `dotvim_directory` 
 Install [Nerd Tree](https://github.com/scrooloose/nerdtree) using Pathogen
-` cd ~/.vim/bundle; \ 
-
-  git clone git://github.com/scrooloose/nerdtree.git `
+    cd ~/.vim/bundle; \ 
+    git clone git://github.com/scrooloose/nerdtree.git 
 
 Install [Fuzzy Finder](https://github.com/vim-scripts/FuzzyFinder) if so inclined 
 
