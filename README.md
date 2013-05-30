@@ -1,6 +1,7 @@
 # configurations
 
 ##dotfiles
+
     cp vim/dotfiles/* ~/; \
     cp git/dotfiles/* ~/; \
     cp zsh/dotfiles/* ~/; \
@@ -18,6 +19,7 @@ Copypasta the following:
 
 ### Plugins (should be installed by copying `dotvim_directory` 
 Install [Nerd Tree](https://github.com/scrooloose/nerdtree) using Pathogen
+
     cd ~/.vim/bundle; \ 
     git clone git://github.com/scrooloose/nerdtree.git 
 
