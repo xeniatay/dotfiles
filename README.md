@@ -1,17 +1,20 @@
-dotfiles
-==============
+# configurations
 
-Vim
--------------
-- ``` cp vim/dotfiles/* ~/ ```
-- Install [Pathogen](https://github.com/tpope/vim-pathogen)
-  - ``` mkdir -p ~/.vim/autoload ~/.vim/bundle; \ 
+##dotfiles
+``` cp vim/dotfiles/* ~/ ```
+``` cp git/dotfiles/* ~/ ```
+``` cp zsh/dotfiles/* ~/ ```
+``` cp bash/dotfiles/* ~/ ```
+
+## Vim
+### Install [Pathogen](https://github.com/tpope/vim-pathogen)
+Copypasta the following:
+``` mkdir -p ~/.vim/autoload ~/.vim/bundle; \ 
         curl -Sso ~/.vim/autoload/pathogen.vim \
         https://raw.github.com/tpope/vim-pathogen/master/autoload/pathogen.vim > ```
-  - Copypasta the above to install.
-- ``` cp -rvi vim/dotvim/* ~/.vim/ ```
 
-__Todo: Clean up .vimrc and .gvimrc__
+``` cp -rvi vim/dotvim_directory/* ~/.vim/ ```
+
 
 _Installing Plugins Separately_
 - Install [Nerd Tree](https://github.com/scrooloose/nerdtree) using Pathogen
@@ -21,11 +24,11 @@ _Installing Plugins Separately_
 - Molokai can be found [here](https://github.com/tomasr/dotfiles/tree/master/.vim/colors)
 - No idea what vim-fuf-data is for
 
-Git, ZSH, Bash
--------------
+## Git, ZSH, Bash
+
+
+### Todo: 
+- Clean up .vimrc, .gvimrc, .zsh-profile, .zsh-nocorrect
 - Todo: fill in .zsh info and work on zsh theme
-
-- ``` cp git/* ~/ ```
-- ``` cp zsh/* ~/ ```
-- ``` cp bash/* ~/ ```
-
+- Convert codesnippets/firebird_gitconfigs to git gists/sublime snippets
+- Push sublime configs as well
