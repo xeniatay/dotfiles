@@ -6,8 +6,8 @@ set si
 set et
 
 set nu
-set sw=2
-set ts=2
+set sw=4
+set ts=4
 set is
 set expandtab
 
@@ -41,7 +41,7 @@ augroup BgHighlight
   autocmd WinLeave * set nonumber
 augroup END
 
-colorscheme torte
+colorscheme ir_black
 
 set gfn=Menlo:h12
 
@@ -69,3 +69,5 @@ command Wq wq
 command W w
 command Q q
 
+" Disable folding for .md files
+let g:vim_markdown_folding_disabled=1
