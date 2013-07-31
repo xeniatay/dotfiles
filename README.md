@@ -1,11 +1,7 @@
 # configurations
 
 ##dotfiles
-
-    cp vim/dotfiles/* ~/; \
-    cp git/dotfiles/* ~/; \
-    cp zsh/dotfiles/* ~/; \
-    cp bash/dotfiles/* ~/; 
+`./makesymlinks.sh`
 
 ## Vim
 ### Install [Pathogen](https://github.com/tpope/vim-pathogen)

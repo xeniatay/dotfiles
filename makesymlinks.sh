@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="bashrc bash_profile vimrc vim gvimrc zshrc zsh_profile zsh_nocorrect oh-my-zsh"    # list of files/folders to symlink in homedir
+files="bashrc bash_profile vimrc vim gvimrc zshrc zsh_profile zsh_nocorrect oh-my-zsh gitconfig"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -25,10 +25,12 @@ echo "done"
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks from the homedir to any files in the ~/dotfiles directory specified in $files
 for file in $files; do
     echo "Moving any existing dotfiles from ~ to $olddir"
-    mv ~/.$file ~/dotfiles_old/
+    mv ~/.$file ~/$olddir
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
 done
+
+cd -
 
 function install_zsh {
 # Test to see if zshell is installed.  If it is:

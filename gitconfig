@@ -6,7 +6,8 @@
 [credential]
 	helper = osxkeychain
 [core]
-  pager = less -r
+	pager = cat
+	pager = less -F -X
 [color]
   ui = auto # covers diff = true, status = auto, branch = auto
   interactive = auto
@@ -25,14 +26,16 @@
   untracked = cyan
 [alias]
   s = status
-  l = log --graph --pretty=format:'%C(yellow)%h%C(cyan)%d%Creset %s %C(white)- %an, %ar%Creset'
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  ds = !"git diff; git status;"
+
   # From Aaron
   br = branch
   ci = commit
   co = checkout
   df = diff
   g = grep -I
-  lg = log -p
+  l = log -p
   pb = publish-branch
   pp = !"echo 'Pull'; git pull; echo 'Push'; git push"
   rb = rbranch
@@ -56,4 +59,5 @@
   pushInsteadOf = "git://gist.github.com/"
 [url "git://gist.github.com/"]
   insteadOf = "gist:"
-
+[push]
+	default = simple
