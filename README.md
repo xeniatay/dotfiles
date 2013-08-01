@@ -1,6 +1,7 @@
 # configurations
 
 ##dotfiles
+[Version controlled dotfiles](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/)
 `./makesymlinks.sh`
 
 ## Vim
