@@ -15,7 +15,7 @@
 
 ### dotfiles: [version controlled](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/)
 
-    git clone git@github.com:xeniatay/dotfiles.git
+    git clone git@github.com:xeniatay/dotfiles.git; \
     ./makesymlinks.sh
 
 ### Install [Iterm 2](http://www.iterm2.com/)
@@ -28,7 +28,7 @@
 
 **Install all tried, tested and loved packages**
 
-*Maybe it's easier to just version control 'Installed\ Packages'?*
+*Maybe it's easier to just version control `Installed Packages`?*
 
     cd ~/Library/Application\ Support/Sublime\ Text\ 3/; \
     git clone git@github.com:xeniatay/st3_packages.git; \
@@ -53,7 +53,7 @@
 
 We really just need `xeniatay.zsh-theme`
 
-*Perhaps **don't** version control the whole dir?*
+*Perhaps don't version control the whole dir?*
 
 ### Vim
 
