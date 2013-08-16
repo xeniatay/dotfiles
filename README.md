@@ -66,6 +66,10 @@ We really just need `xeniatay.zsh-theme`
 - [Molokai](https://github.com/tomasr/dotfiles/tree/master/.vim/colors)
 - [ir\_black](http://toddwerth.com/2011/07/21/the-original-ir_black-for-os-x-lion/)
 
+### Install [IE VMS](http://infoheap.com/run-ie-on-mac-virtualbox/)
+
+:( in the name of cross-browser compatibility
+
 ### Todo: 
 - Clean up .vimrc, .gvimrc, .zsh-profile, 
 - Fill in .zsh-nocorrect (or learn how to use the damn autocorrect)
