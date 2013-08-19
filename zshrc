@@ -63,10 +63,22 @@ __git_files () {
     _wanted files expl 'local files' _files
 }
 
+# VIM Mode - bind 'jk' to esc
+bindkey -v
+bindkey -M viins 'jk' vi-cmd-mode
+
+# Aliases
+alias vgs='cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Vintageous'
+
+
+# ZSH syntax highlighting
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
+ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
+
+# Indochino stuff
 alias restart-couch='/usr/bin/sudo launchctl stop org.apache.couchdb'
 alias start-couch='/usr/bin/sudo launchctl load -w /Library/LaunchDaemons/org.apache.couchdb.plist'
 alias stop-couch='/usr/bin/sudo launchctl unload /Library/LaunchDaemons/org.apache.couchdb.plist'
-alias vgs='cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Vintageous'
 
 # deploy indochino
 # cap <servername> -S branch="<branchname>" deploy
