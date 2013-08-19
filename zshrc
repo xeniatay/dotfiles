@@ -59,14 +59,17 @@ compctl -K _my_cpl command-name
 zstyle ':completion:*' menu select
 
 # Fixes slow git autocompletion
-__git_files () { 
-    _wanted files expl 'local files' _files     
+__git_files () {
+    _wanted files expl 'local files' _files
 }
 
 alias restart-couch='/usr/bin/sudo launchctl stop org.apache.couchdb'
 alias start-couch='/usr/bin/sudo launchctl load -w /Library/LaunchDaemons/org.apache.couchdb.plist'
 alias stop-couch='/usr/bin/sudo launchctl unload /Library/LaunchDaemons/org.apache.couchdb.plist'
 alias vgs='cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Vintageous'
+
+# brew install zsh-syntax-highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # deploy indochino
 # cap <servername> -S branch="<branchname>" deploy

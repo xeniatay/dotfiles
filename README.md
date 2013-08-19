@@ -55,6 +55,9 @@ We really just need `xeniatay.zsh-theme`
 
 *Perhaps don't version control the whole dir?*
 
+### zsh-syntax-highlighting
+brew install zsh-syntax-highlighting
+
 ### Vim
 
 **Plugins**
