@@ -24,7 +24,7 @@ DISABLE_COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails git osx ruby brew gem grunt)
+plugins=(rails git osx ruby brew gem grunt zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -67,9 +67,6 @@ alias restart-couch='/usr/bin/sudo launchctl stop org.apache.couchdb'
 alias start-couch='/usr/bin/sudo launchctl load -w /Library/LaunchDaemons/org.apache.couchdb.plist'
 alias stop-couch='/usr/bin/sudo launchctl unload /Library/LaunchDaemons/org.apache.couchdb.plist'
 alias vgs='cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Vintageous'
-
-# brew install zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # deploy indochino
 # cap <servername> -S branch="<branchname>" deploy
