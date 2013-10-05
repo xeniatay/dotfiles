@@ -41,7 +41,7 @@ augroup BgHighlight
   autocmd WinLeave * set nonumber
 augroup END
 
-colorscheme ir_black
+colorscheme wombat
 
 set gfn=Menlo:h12
 

@@ -1,6 +1,10 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+#disable autocomplete
+source $ZSH/oh-my-zsh.sh
+unsetopt correct
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -26,14 +30,16 @@ DISABLE_COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(rails git osx ruby brew gem grunt zsh-syntax-highlighting)
 
-source $ZSH/oh-my-zsh.sh
-
 # Customize to your needs...
+## REMOVE: PATH dirs specific to CS350
 pathdirs=(
     /usr/local/bin
     /usr/local/sbin
     /Users/Xenia.Tay/.nave/installed/0.6.11/bin
     ~/bin
+    /u/cs350/sys161/bin
+    /u/cs350/bin
+    /u1/xzytay/localcommands
 )
 for dir in $pathdirs; do
     if [ -d $dir ]; then
@@ -83,3 +89,16 @@ alias stop-couch='/usr/bin/sudo launchctl unload /Library/LaunchDaemons/org.apac
 # deploy indochino
 # cap <servername> -S branch="<branchname>" deploy
 # /etc/init.d couchdb restart
+
+# setenv
+setenv () { typeset -x "${1}${1:+=}${(@)argv[2,$#]}" }
+
+# CS350
+setenv CVSROOT ~/cvsroot/cs350
+alias os161='~/cs350-os161'
+#alias cd-asst1='cd ~/cs350-os161/os161-1.99/kern/compile/ASST1'
+#alias bmake-all='bmake depend; bmake; bmake install'
+
+# CS370
+alias matlab='matlab -nodesktop -nosplash'
+
