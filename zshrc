@@ -39,7 +39,6 @@ pathdirs=(
     ~/bin
     /u/cs350/sys161/bin
     /u/cs350/bin
-    /u1/xzytay/localcommands
 )
 for dir in $pathdirs; do
     if [ -d $dir ]; then
@@ -96,9 +95,8 @@ setenv () { typeset -x "${1}${1:+=}${(@)argv[2,$#]}" }
 # CS350
 setenv CVSROOT ~/cvsroot/cs350
 alias os161='~/cs350-os161'
-#alias cd-asst1='cd ~/cs350-os161/os161-1.99/kern/compile/ASST1'
-#alias bmake-all='bmake depend; bmake; bmake install'
+alias cd-asst1='cd ~/cs350-os161/os161-1.99/kern/compile/ASST1'
+alias bmake-all='bmake depend; bmake; bmake install'
 
 # CS370
-alias matlab='matlab -nodesktop -nosplash'
 
