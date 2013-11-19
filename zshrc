@@ -1,9 +1,9 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-#disable autocomplete
+# disable autocomplete
 source $ZSH/oh-my-zsh.sh
-unsetopt correct
+# unsetopt correct
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -95,7 +95,7 @@ setenv () { typeset -x "${1}${1:+=}${(@)argv[2,$#]}" }
 # CS350
 setenv CVSROOT ~/cvsroot/cs350
 alias os161='~/cs350-os161'
-alias cd-asst1='cd ~/cs350-os161/os161-1.99/kern/compile/ASST1'
+alias cd-asst2='cd ~/cs350-os161/os161-1.99/kern/compile/ASST2'
 alias bmake-all='bmake depend; bmake; bmake install'
 
 # CS370
