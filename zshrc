@@ -1,10 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-# disable autocomplete
-source $ZSH/oh-my-zsh.sh
-# unsetopt correct
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -29,6 +25,10 @@ DISABLE_COMPLETION_WAITING_DOTS="true"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(rails git osx ruby brew gem grunt zsh-syntax-highlighting)
+
+# disable autocomplete
+source $ZSH/oh-my-zsh.sh
+unsetopt correct
 
 # Customize to your needs...
 ## REMOVE: PATH dirs specific to CS350
