@@ -2,7 +2,7 @@
 
 ### Install xcode and [homebrew](http://brew.sh/)
 
-    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"; \
+    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"; \
     brew doctor
 
 ### Install git
