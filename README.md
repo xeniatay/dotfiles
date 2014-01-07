@@ -16,6 +16,7 @@
 ### dotfiles: [version controlled](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/)
 
     git clone git@github.com:xeniatay/dotfiles.git; \
+    cd dotfiles; \
     ./makesymlinks.sh
 
 ### Install [Iterm 2](http://www.iterm2.com/)
