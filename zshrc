@@ -83,3 +83,30 @@ alias stop-couch='/usr/bin/sudo launchctl unload /Library/LaunchDaemons/org.apac
 # deploy indochino
 # cap <servername> -S branch="<branchname>" deploy
 # /etc/init.d couchdb restart
+
+# wanderable
+alias startdj='./script/delayed_job start'
+alias stopdj='./script/delayed_job stop'
+alias logdj='less log/delayed_job.log'
+alias bal='echo "Routing Number  Account Number  Scenario
+100000007 8887776665555 Invalid Routing Number
+111111118 8887776665555 Invalid Routing Number
+021000021 9900000000  Transitions state to pending
+321174851 9900000001  Transitions state to pending
+021000021 9900000002  Transitions state to paid (credits) or succeeded (debits)
+321174851 9900000003  Transitions state to paid (credits) or succeeded (debits)
+021000021 9900000004  Transitions state to failed
+321174851 9900000005  Transitions state to failed
+
+https://docs.balancedpayments.com/current/#test-bank-account-numbers
+
+Card Brand  Number  Security Code Result
+VISA  4111111111111111  123 SUCCESS
+MasterCard  5105105105105100  123 SUCCESS
+AMEX  341111111111111 1234  SUCCESS
+VISA  4444444444444448 [1]  123 SIMULATE PROCESSOR FAILURE
+VISA  4222222222222220 [2]  123 SIMULATE TOKENIZATION ERROR
+[1] Simulate a card which can be tokenized but will not be accepted for creating holds or debits. This type of failure is what you would expect if you try to create a hold on a card with insufficient funds.
+[2] To simulate a card which cannot be tokenized but passes a LUHN check. You could expect this failure when a user tried to enter in a credit card which used to work but has been canceled.
+
+https://docs.balancedpayments.com/current/#test-credit-card-numbers"'
