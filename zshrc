@@ -1,6 +1,10 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+#disable autocomplete
+source $ZSH/oh-my-zsh.sh
+unsetopt correct
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -8,7 +12,7 @@ ZSH=$HOME/.oh-my-zsh
 export ZSH_THEME="xeniatay"
 
 # Set to this to use case-sensitive completion
-CASE_SENSITIVE="true"
+CASE_SENSITIVE="false"
 
 # Comment this out to disable weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
@@ -34,6 +38,8 @@ pathdirs=(
     /usr/local/sbin
     /Users/Xenia.Tay/.nave/installed/0.6.11/bin
     ~/bin
+    ~/sys161/tools/bin
+    ~/sys161/bin
 )
 for dir in $pathdirs; do
     if [ -d $dir ]; then
@@ -69,17 +75,25 @@ bindkey -M viins 'jk' vi-cmd-mode
 
 # Aliases
 alias vgs='cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Vintageous'
+alias wp-themes='cd ~/projs/wordpress/wp-content/themes'
 
 
 # ZSH syntax highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 
-# Indochino stuff
-alias restart-couch='/usr/bin/sudo launchctl stop org.apache.couchdb'
-alias start-couch='/usr/bin/sudo launchctl load -w /Library/LaunchDaemons/org.apache.couchdb.plist'
-alias stop-couch='/usr/bin/sudo launchctl unload /Library/LaunchDaemons/org.apache.couchdb.plist'
+# sshfs
+alias sshfs-350='sshfs xzytay@linux.student.cs.uwaterloo.ca:/u1/xzytay/cs350-os161/ ~/projs/os161-cs350' # CS 350
+alias sshfs-341='sshfs xzytay@linux.student.cs.uwaterloo.ca:/u1/xzytay/cs341/ ~/projs/cs341' # CS 341
 
-# deploy indochino
-# cap <servername> -S branch="<branchname>" deploy
-# /etc/init.d couchdb restart
+# ssh
+alias ssh-cs='ssh xzytay@linux028.student.cs.uwaterloo.ca'
+alias ssh-csx='ssh -X xzytay@linux028.student.cs.uwaterloo.ca'
+
+# bones less
+alias less-wp='lessc -w less/style.less css/style.css'
+
+# CS 350
+alias conf-asst2='cd ~/projs/os161-group/os161-1.99/kern/conf; ./config ASST2'
+alias bmake-all='bmake depend; bmake; bmake install'
+
