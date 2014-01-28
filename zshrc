@@ -88,6 +88,7 @@ alias stop-couch='/usr/bin/sudo launchctl unload /Library/LaunchDaemons/org.apac
 alias startdj='./script/delayed_job start'
 alias stopdj='./script/delayed_job stop'
 alias logdj='less log/delayed_job.log'
+alias beta-migrate='heroku run rake db:migrate --app wanderable-beta'
 alias bal='echo "Routing Number  Account Number  Scenario
 100000007 8887776665555 Invalid Routing Number
 111111118 8887776665555 Invalid Routing Number
