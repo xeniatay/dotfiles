@@ -2,7 +2,7 @@
 
 ### Install xcode and [homebrew](http://brew.sh/)
 
-    ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"; \
+    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"; \
     brew doctor
 
 ### Install git
@@ -16,6 +16,7 @@
 ### dotfiles: [version controlled](http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/)
 
     git clone git@github.com:xeniatay/dotfiles.git; \
+    cd dotfiles; \
     ./makesymlinks.sh
 
 ### Install [Iterm 2](http://www.iterm2.com/)
@@ -49,6 +50,8 @@
 
 [Migrating from ST2 to ST3] (http://wesbos.com/migrating-to-sublime-text-3/)
 
+**Install [Package Control](https://sublime.wbond.net/installation#Manual)**
+
 ### zsh
 
 We really just need `xeniatay.zsh-theme`
@@ -73,3 +76,4 @@ We really just need `xeniatay.zsh-theme`
 ### Todo: 
 - Clean up .vimrc, .gvimrc, .zsh-profile, 
 - Fill in .zsh-nocorrect (or learn how to use the damn autocorrect)
+- Find a better way to version control Vintageous and Sublime Text 3 so it plays nice with new installs
