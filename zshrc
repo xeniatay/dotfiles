@@ -111,3 +111,10 @@ VISA  4222222222222220 [2]  123 SIMULATE TOKENIZATION ERROR
 [2] To simulate a card which cannot be tokenized but passes a LUHN check. You could expect this failure when a user tried to enter in a credit card which used to work but has been canceled.
 
 https://docs.balancedpayments.com/current/#test-credit-card-numbers"'
+
+# wanderable-beta
+# heroku run rake db:migrate --app wanderable-beta
+# heroku run console -a wanderable-beta
+# git remote add wanderable-beta git@heroku.com:wanderable-beta.git
+# git push wanderable-beta merchant_portal:master
+alias howtobeta='echo "git push wanderable-beta branch:master"'
