@@ -130,4 +130,6 @@ https://docs.balancedpayments.com/current/#test-credit-card-numbers"'
 # heroku run console -a wanderable-beta
 # git remote add wanderable-beta git@heroku.com:wanderable-beta.git
 # git push wanderable-beta merchant_portal:master
-alias howtobeta='echo "git push wanderable-beta branch:master"'
+alias howtobeta='echo "git push wanderable-beta branch:master
+heroku run console -a wanderable-beta
+heroku run rake db:migrate --app wanderable-beta"'
