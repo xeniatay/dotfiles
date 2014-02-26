@@ -6,6 +6,7 @@
 [credential]
 	helper = osxkeychain
 [core]
+    autocrlf = false
 	pager = cat
 	pager = less -F -X
 [color]
