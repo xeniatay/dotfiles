@@ -15,7 +15,7 @@ export ZSH_THEME="xeniatay"
 CASE_SENSITIVE="false"
 
 # Comment this out to disable weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment following line if you want to disable colors in ls
 # DISABLE_LS_COLORS="true"
@@ -41,6 +41,7 @@ pathdirs=(
     ~/sys161/tools/bin
     ~/sys161/bin
 )
+
 for dir in $pathdirs; do
     if [ -d $dir ]; then
         path+=$dir
@@ -76,7 +77,6 @@ bindkey -M viins 'jk' vi-cmd-mode
 # Aliases
 alias vgs='cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Vintageous'
 alias wp-themes='cd ~/projs/wordpress/wp-content/themes'
-
 
 # ZSH syntax highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
