@@ -59,6 +59,6 @@ fi
 }
 
 install_zsh
-gem install wirble
-gem install colorize
-gem install awesome_print
+sudo gem install wirble
+sudo gem install colorize
+sudo gem install awesome_print
