@@ -2,3 +2,6 @@ ack
 wget
 subl
 less
+npm
+lessc
+lg

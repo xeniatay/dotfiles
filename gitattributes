@@ -1,1 +1,2 @@
 ~/projs/wanderable/public/stylesheets/*.css -diff
+~/projs/wanderable/app/assets/stylesheets/css/*.css -diff

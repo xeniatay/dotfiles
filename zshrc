@@ -40,6 +40,7 @@ pathdirs=(
     ~/bin
     ~/sys161/tools/bin
     ~/sys161/bin
+    /Applications/Postgres93.app/Contents/MacOS/bin
 )
 
 for dir in $pathdirs; do
@@ -162,4 +163,11 @@ https://stripe.com/docs/testing"'
 # git push wanderable-beta merchant_portal:master
 alias howtobeta='echo "git push wanderable-beta branch:master
 heroku run console -a wanderable-beta
-heroku run rake db:migrate --app wanderable-beta"'
+heroku run bundle exec rake db:migrate --app wanderable-beta
+heroku run rake db:migrate --app wanderable-beta
+RAILS_ENV=beta bundle exec rake assets:precompile
+heroku run bundle exec rails console"'
+
+alias howtoassets='echo "in development.rb: config.assets.debug = false
+RAILS_ENV=production bundle exec rake assets:precompile
+rake assets:clean assets:precompile"'
