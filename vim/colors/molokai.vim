@@ -76,7 +76,7 @@ hi Question        guifg=#66D9EF
 hi Repeat          guifg=#F92672               gui=bold
 hi Search          guifg=#FFFFFF guibg=#455354
 " marks column
-hi SignColumn      guifg=#A6E22E guibg=#232526
+hi SignColumn      guifg=#A6E22E guibg=#000000
 hi SpecialChar     guifg=#F92672               gui=bold
 hi SpecialComment  guifg=#BCA3A3               gui=bold
 hi Special         guifg=#66D9EF guibg=bg      gui=italic
@@ -133,7 +133,7 @@ if &t_Co > 255
       hi Normal                   ctermbg=233
       hi CursorLine               ctermbg=235   cterm=none
    else
-      hi Normal       ctermfg=252 ctermbg=234
+      hi Normal       ctermfg=252 ctermbg=none
       hi CursorLine               ctermbg=234   cterm=none
    endif
    hi Boolean         ctermfg=135
@@ -187,7 +187,7 @@ if &t_Co > 255
    hi Search          ctermfg=253 ctermbg=66
 
    " marks column
-   hi SignColumn      ctermfg=118 ctermbg=235
+   hi SignColumn      ctermfg=118 ctermbg=none
    hi SpecialChar     ctermfg=161               cterm=bold
    hi SpecialComment  ctermfg=245               cterm=bold
    hi Special         ctermfg=81  ctermbg=232
@@ -214,7 +214,7 @@ if &t_Co > 255
    hi Comment         ctermfg=59
    hi CursorColumn                ctermbg=234
    hi ColorColumn                 ctermbg=234
-   hi LineNr          ctermfg=250 ctermbg=234
+   hi LineNr          ctermfg=250 ctermbg=none
    hi NonText         ctermfg=59
    hi SpecialKey      ctermfg=59
 end

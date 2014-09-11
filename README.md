@@ -75,5 +75,4 @@ We really just need `xeniatay.zsh-theme`
 
 ### Todo: 
 - Clean up .vimrc, .gvimrc, .zsh-profile, 
-- Fill in .zsh-nocorrect (or learn how to use the damn autocorrect)
 - Find a better way to version control Vintageous and Sublime Text 3 so it plays nice with new installs

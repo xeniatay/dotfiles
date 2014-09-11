@@ -1,10 +1,6 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
-#disable autocomplete
-source $ZSH/oh-my-zsh.sh
-unsetopt correct
-
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -30,7 +26,9 @@ DISABLE_COMPLETION_WAITING_DOTS="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=(rails git osx ruby brew gem grunt zsh-syntax-highlighting)
 
+# disable fecking autocorrect
 source $ZSH/oh-my-zsh.sh
+unsetopt correct_all
 
 # Customize to your needs...
 pathdirs=(
@@ -41,6 +39,10 @@ pathdirs=(
     ~/sys161/tools/bin
     ~/sys161/bin
     /Applications/Postgres93.app/Contents/MacOS/bin
+    /usr/local/arcanist/bin # BP arcanist
+    /opt/local/bin # BP MacPorts
+    /opt/local/sbin # BP MacPorts
+    /Applications/maven/bin # BP maven
 )
 
 for dir in $pathdirs; do
@@ -91,83 +93,38 @@ alias sshfs-341='sshfs xzytay@linux.student.cs.uwaterloo.ca:/u1/xzytay/cs341/ ~/
 alias ssh-cs='ssh xzytay@linux028.student.cs.uwaterloo.ca'
 alias ssh-csx='ssh -X xzytay@linux028.student.cs.uwaterloo.ca'
 
-# bones less
-alias less-wp='lessc -w less/style.less css/style.css'
+# BandPage env variables
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/"
+export CATALINA_HOME=/opt/local/apache-tomcat-7.0.42
+export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=512m"
+export WEB_ENVIRONMENT=local
+export WEB_ENV="localhost"
 
-# CS 350
-alias conf-asst2='cd ~/projs/os161-group/os161-1.99/kern/conf; ./config ASST2'
-alias bmake-all='bmake depend; bmake; bmake install'
+# ARC
+export EDITOR="vim"
 
-# wanderable
-alias startdj='./script/delayed_job start'
-alias stopdj='./script/delayed_job stop'
-alias logdj='less log/delayed_job.log'
-alias beta-migrate='heroku run rake db:migrate --app wanderable-beta'
-alias howtofunds='echo "Routing Number  Account Number  Scenario
-100000007 8887776665555 Invalid Routing Number
-111111118 8887776665555 Invalid Routing Number
-021000021 9900000000  Transitions state to pending
-321174851 9900000001  Transitions state to pending
-021000021 9900000002  Transitions state to paid (credits) or succeeded (debits)
-321174851 9900000003  Transitions state to paid (credits) or succeeded (debits)
-021000021 9900000004  Transitions state to failed
-321174851 9900000005  Transitions state to failed
+# history search backwards and forwards
+bindkey '\eOA' history-beginning-search-backward
+bindkey '\e[A' history-beginning-search-backward
+bindkey '\eOB' history-beginning-search-forward
+bindkey '\e[B' history-beginning-search-forward
 
-https://docs.balancedpayments.com/current/#test-bank-account-numbers
+# howto arcanist and rebaaase
+alias phab='echo "-- changes need to be made to diff --
 
-Card Brand  Number  Security Code Result
-VISA  4111111111111111  123 SUCCESS
-MasterCard  5105105105105100  123 SUCCESS
-AMEX  341111111111111 1234  SUCCESS
-VISA  4444444444444448 [1]  123 SIMULATE PROCESSOR FAILURE
-VISA  4222222222222220 [2]  123 SIMULATE TOKENIZATION ERROR
-[1] Simulate a card which can be tokenized but will not be accepted for creating holds or debits. This type of failure is what you would expect if you try to create a hold on a card with insufficient funds.
-[2] To simulate a card which cannot be tokenized but passes a LUHN check. You could expect this failure when a user tried to enter in a credit card which used to work but has been canceled.
+$ git commit --amend // Amend your previous commit.
+$ arc diff // Update your existing Phabricator diff.
 
-https://docs.balancedpayments.com/current/#test-credit-card-numbers
+-- get diff approved -- 
 
-Stripe
-Number  Card type
-4242424242424242  Visa
-4012888888881881  Visa
-5555555555554444  MasterCard
-5105105105105100  MasterCard
-378282246310005 American Express
-371449635398431 American Express
-6011111111111117  Discover
-6011000990139424  Discover
-30569309025904  Diners Club
-38520000023237  Diners Club
-3530111333300000  JCB
-3566002020360505  JCB
-In addition, these cards will produce specific responses that are useful for testing different scenarios:
+$ arc amend // Close the diff in Phabricator.
+$ git checkout s/XX // Checkout the current sprint branch.
+$ git pull // Get the latest code.
+$ git co my-feature // Switch back to your branch.
+$ git rebase s/XX // Rebase the latest code into your branch.
 
-Number  Description
-4000000000000010  With default account settings, charge will succeed but address_line1_check and address_zip_check will both fail.
-4000000000000028  With default account settings, charge will succeed but address_line1_check will fail.
-4000000000000036  With default account settings, charge will succeed but address_zip_check will fail.
-4000000000000044  With default account settings, charge will succeed but address_zip_check and address_line1_check will both be unchecked.
-4000000000000101  With default account settings, charge will succeed but cvc_check will fail if a CVC is entered.
-4000000000000341  Attaching this card to a Customer object will succeed, but attempts to charge the customer will fail.
-4000000000000002  Charges with this card will always be declined with a card_declined code.
-4000000000000127  Charge be declined with an incorrect_cvc code.
-4000000000000069  Charge be declined with an expired_card code.
-4000000000000119  Charge be declined with a processing_error code.
+… deal with any merge conflicts that may arise …
 
-https://stripe.com/docs/testing"'
-
-# wanderable-beta
-# heroku run rake db:migrate --app wanderable-beta
-# heroku run console -a wanderable-beta
-# git remote add wanderable-beta git@heroku.com:wanderable-beta.git
-# git push wanderable-beta merchant_portal:master
-alias howtobeta='echo "git push wanderable-beta branch:master
-heroku run console -a wanderable-beta
-heroku run bundle exec rake db:migrate --app wanderable-beta
-heroku run rake db:migrate --app wanderable-beta
-RAILS_ENV=beta bundle exec rake assets:precompile
-heroku run bundle exec rails console"'
-
-alias howtoassets='echo "in development.rb: config.assets.debug = false
-RAILS_ENV=production bundle exec rake assets:precompile
-rake assets:clean assets:precompile"'
+$ git co s/XX // Checkout the current sprint branch.
+$ git merge my-feature // Perform a fast-forward merge.
+$ git push // Have a beer."'

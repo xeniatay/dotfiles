@@ -43,8 +43,8 @@ augroup END
 
 " colorscheme torte 
 
-set background=dark 
-colorscheme ir_black 
+" set background=dark 
+" colorscheme molokai
 syntax on
 
 set gfn=Menlo:h12
