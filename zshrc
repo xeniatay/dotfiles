@@ -127,4 +127,19 @@ $ git rebase s/XX // Rebase the latest code into your branch.
 
 $ git co s/XX // Checkout the current sprint branch.
 $ git merge my-feature // Perform a fast-forward merge.
-$ git push // Have a beer."'
+$ git push origin s/XX // Have a beer."'
+
+alias apache-start='sudo /opt/local/apache2/bin/apachectl start'
+alias apache-stop='sudo /opt/local/apache2/bin/apachectl stop'
+alias apache-restart='sudo /opt/local/apache2/bin/apachectl restart'
+alias mysql-start='sudo /opt/local/bin/mysqld_safe5 &'
+alias mysql-stop='sudo /opt/local/bin/mysqladmin5 -u root -p shutdown'
+alias bp-fs='echo "> memcached -d 
+> start apache
+> start mysql
+> [api] mvn clean tomcat7:run 
+> [api-core] mvn clean compile;\ mvn -Dflyway.outOfOrder=true compile flyway:migrate;\ mvn install -DskipTests=true
+> [load-balancer] sudo npm start 
+> [node-www] npm start 
+> hawthorn"'
+

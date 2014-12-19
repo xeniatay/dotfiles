@@ -7,8 +7,9 @@
 	helper = osxkeychain
 [core]
     autocrlf = false
-	pager = cat
 	pager = less -F -X
+    pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less -F -X # diff by on a character basis
+	excludesfile = /Users/xenia/.gitignore_global
 [color]
   ui = auto # covers diff = true, status = auto, branch = auto
   interactive = auto
@@ -27,7 +28,8 @@
   untracked = cyan
 [alias]
   s = status
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lg = log -p
   ds = !"git diff; git status;"
 
   # From Aaron
@@ -36,7 +38,6 @@
   co = checkout
   df = diff
   g = grep -I
-  l = log -p
   pb = publish-branch
   pp = !"echo 'Pull'; git pull; echo 'Push'; git push"
   rb = rbranch
@@ -65,3 +66,13 @@
 	template = /Users/xenia/commit.template
 [push]
 	default = matching
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
