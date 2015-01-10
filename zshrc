@@ -86,19 +86,11 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 
 # sshfs
-alias sshfs-350='sshfs xzytay@linux.student.cs.uwaterloo.ca:/u1/xzytay/cs350-os161/ ~/projs/os161-cs350' # CS 350
-alias sshfs-341='sshfs xzytay@linux.student.cs.uwaterloo.ca:/u1/xzytay/cs341/ ~/projs/cs341' # CS 341
+alias sshfs-488='sshfs xzytay@linux.student.cs.uwaterloo.ca:/u1/xzytay/cs488/ ~/projs/cs488' # CS 488
 
 # ssh
 alias ssh-cs='ssh xzytay@linux028.student.cs.uwaterloo.ca'
-alias ssh-csx='ssh -X xzytay@linux028.student.cs.uwaterloo.ca'
-
-# BandPage env variables
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_67.jdk/Contents/Home/"
-export CATALINA_HOME=/opt/local/apache-tomcat-7.0.42
-export MAVEN_OPTS="-Xmx1024m -XX:MaxPermSize=512m"
-export WEB_ENVIRONMENT=local
-export WEB_ENV="localhost"
+alias ssh-csx='ssh -X xzytay@linux.student.cs.uwaterloo.ca'
 
 # ARC
 export EDITOR="vim"
@@ -109,37 +101,12 @@ bindkey '\e[A' history-beginning-search-backward
 bindkey '\eOB' history-beginning-search-forward
 bindkey '\e[B' history-beginning-search-forward
 
-# howto arcanist and rebaaase
-alias phab='echo "-- changes need to be made to diff --
+# bones less
+alias less-wp='lessc -w less/style.less css/style.css'
 
-$ git commit --amend // Amend your previous commit.
-$ arc diff // Update your existing Phabricator diff.
+# CS 350
+alias conf-asst2='cd ~/projs/os161-group/os161-1.99/kern/conf; ./config ASST2'
+alias bmake-all='bmake depend; bmake; bmake install'
 
--- get diff approved -- 
-
-$ arc amend // Close the diff in Phabricator.
-$ git checkout s/XX // Checkout the current sprint branch.
-$ git pull // Get the latest code.
-$ git co my-feature // Switch back to your branch.
-$ git rebase s/XX // Rebase the latest code into your branch.
-
-… deal with any merge conflicts that may arise …
-
-$ git co s/XX // Checkout the current sprint branch.
-$ git merge my-feature // Perform a fast-forward merge.
-$ git push origin s/XX // Have a beer."'
-
-alias apache-start='sudo /opt/local/apache2/bin/apachectl start'
-alias apache-stop='sudo /opt/local/apache2/bin/apachectl stop'
-alias apache-restart='sudo /opt/local/apache2/bin/apachectl restart'
-alias mysql-start='sudo /opt/local/bin/mysqld_safe5 &'
-alias mysql-stop='sudo /opt/local/bin/mysqladmin5 -u root -p shutdown'
-alias bp-fs='echo "> memcached -d 
-> start apache
-> start mysql
-> [api] mvn clean tomcat7:run 
-> [api-core] mvn clean compile;\ mvn -Dflyway.outOfOrder=true compile flyway:migrate;\ mvn install -DskipTests=true
-> [load-balancer] sudo npm start 
-> [node-www] npm start 
-> hawthorn"'
-
+# fink for CS488
+source /sw/bin/init.sh
