@@ -110,3 +110,6 @@ alias bmake-all='bmake depend; bmake; bmake install'
 
 # fink for CS488
 source /sw/bin/init.sh
+
+# local static python server
+alias pyserver='python -m SimpleHTTPServer' # add portname to command e.g. pyserver 8888
