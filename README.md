@@ -41,7 +41,8 @@
     cd ~/Library/Application Support/Sublime Text 3/Packages; \
     git clone git@github.com:xeniatay/Vintageous.git; \
     cd Vintageous; \
-    git checkout xeniatay
+    git checkout xeniatay; \
+    ./build.sh
 
 *Enable 'subl' command in the terminal and enable press and hold for keys (like using j to scroll downnnn):*
 
