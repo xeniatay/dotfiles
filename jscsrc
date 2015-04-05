@@ -1,0 +1,26 @@
+{
+    "preset": "google",
+    "fileExtensions": [ ".js", "jscs" ],
+    "disallowSpacesInsideObjectBrackets": null,
+    "disallowSpacesInsideParentheses": null
+
+    // "disallowSpacesInAnonymousFunctionExpression": null,
+    // "disallowCapitalizedComments": null,
+    // "disallowCommaBeforeLineBreak": null,
+    // "disallowCurlyBraces": null,
+    // "disallowMultipleLineBreaks": true,
+
+    // "requireParenthesesAroundIIFE": true,
+    // "maximumLineLength": 120,
+    // "validateLineBreaks": "LF",
+    // "validateIndentation": 4,
+
+    // "disallowKeywords": ["with"],
+    // "disallowImplicitTypeConversion": ["string"],
+
+    // "safeContextKeyword": "_this",
+
+    // "excludeFiles": [
+    //   "test/data/**"
+    // ]
+}

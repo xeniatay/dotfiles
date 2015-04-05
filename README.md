@@ -59,6 +59,10 @@ We really just need `xeniatay.zsh-theme`
 
 *Perhaps don't version control the whole dir?*
 
+### [JSCS](https://medium.com/@addyosmani/auto-formatting-javascript-code-style-fe0f98a923b8)
+
+    npm install -g jscs
+
 ### Vim
 
 **Plugins**
