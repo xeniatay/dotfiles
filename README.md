@@ -1,5 +1,7 @@
 ## Configurations for a fresh machine
 
+### Install Evernote (App Store)
+
 ### Install xcode and [homebrew](http://brew.sh/)
 
     ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"; \
@@ -46,7 +48,7 @@
 
 *Enable 'subl' command in the terminal and enable press and hold for keys (like using j to scroll downnnn):*
 
-    sudo ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /bin/subl; \
+    sudo ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl \
     defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 
 [Migrating from ST2 to ST3] (http://wesbos.com/migrating-to-sublime-text-3/)
