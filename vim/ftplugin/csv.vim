@@ -511,7 +511,7 @@ fu! <sid>WColumn(...) "{{{3
         if exists("a:1") && a:1 > 0
             " bang attribute
             let head  = split(getline(1),b:col.'\zs')
-            " remove preceeding whitespace
+            " remove preceding whitespace
             let ret   = substitute(head[ret-1], '^\s\+', '', '')
             " remove delimiter
             let ret   = substitute(ret, b:delimiter. '$', '', '')

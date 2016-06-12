@@ -1,6 +1,6 @@
 #!/bin/zsh
 # 
-# Make the dirstack more persistant
+# Make the dirstack more persistent
 # 
 # Add dirpersist to $plugins in ~/.zshrc to load
 # 

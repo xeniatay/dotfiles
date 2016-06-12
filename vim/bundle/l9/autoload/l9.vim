@@ -484,7 +484,7 @@ endfunction
 
 " Execute :vimgrep and opens the quickfix window if matches are found.
 "
-" a:pattern: search pattern. If ommitted, last search pattern (@/) is used.
+" a:pattern: search pattern. If omitted, last search pattern (@/) is used.
 " a:files: List of files
 function l9#grepFiles(pattern, files)
   let target = join(map(a:files, 'escape(v:val, " ")'), ' ')
