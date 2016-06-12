@@ -866,7 +866,7 @@ You need to restart Vim, if you have changed this variable or use |InitCSV|
 
 The |hl-Title| highlighting is used for the Header line that is created by the
 |Header_CSV| command. If you prefer a different highlighting, set the
-g:csv_hiHeader variable to the prefered highlighting: >
+g:csv_hiHeader variable to the preferred highlighting: >
 
     let g:csv_hiHeader = 'Pmenu'
 <

@@ -293,7 +293,7 @@ or
         nnoremap <silent> <C-]> :FufBufferTagAllWithCursorWord!<CR>
         vnoremap <silent> <C-]> :FufBufferTagAllWithSelectedText!<CR>
 <
-This mode is inspired by taglist.vim (vimscript #273) and refered its codes.
+This mode is inspired by taglist.vim (vimscript #273) and referred its codes.
 
                                                          *fuf-taggedfile-mode*
 Tagged-File mode ~
