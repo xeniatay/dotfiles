@@ -1,3 +1,9 @@
 # alias vim="/usr/local/bin/mvim"
 #macvim thing
 alias mvim="mvim --remote-tab"
+
+# Common wifast aliases
+#   alias gitgraph='git log --graph --pretty=oneline --abbrev-commit'
+#
+#     # Enable bash completion of ./run
+#       [ -x /Users/xenia/WiFast-Base/run ] && eval "`/Users/xenia/WiFast-Base/run completion`"
