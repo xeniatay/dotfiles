@@ -109,7 +109,12 @@ alias conf-asst2='cd ~/projs/os161-group/os161-1.99/kern/conf; ./config ASST2'
 alias bmake-all='bmake depend; bmake; bmake install'
 
 # fink for CS488
-source /sw/bin/init.sh
+# source /sw/bin/init.sh
 
 # local static python server
 alias pyserver='python -m SimpleHTTPServer' # add portname to command e.g. pyserver 8888
+
+# export NVM_DIR="/Users/xenia/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+nvm use 0.12.7

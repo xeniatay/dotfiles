@@ -8,7 +8,8 @@
 [core]
     autocrlf = false
 	pager = less -F -X
-    pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less -F -X # diff by on a character basis
+#    pager = /usr/local/git/contrib/diff-highlight | less
+#    pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less -F -X # diff by on a character basis
 	excludesfile = /Users/xenia/.gitignore_global
 [color]
   ui = auto # covers diff = true, status = auto, branch = auto
