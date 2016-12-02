@@ -100,6 +100,7 @@ bindkey '\eOA' history-beginning-search-backward
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\eOB' history-beginning-search-forward
 bindkey '\e[B' history-beginning-search-forward
+bindkey "^R" history-incremental-pattern-search-backward
 
 # bones less
 alias less-wp='lessc -w less/style.less css/style.css'
