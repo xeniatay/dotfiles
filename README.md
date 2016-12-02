@@ -65,6 +65,10 @@ We really just need `xeniatay.zsh-theme`
 
     npm install -g jscs
 
+### [git recent](https://github.com/paulirish/git-recent)
+    
+    npm install --global git-recent
+
 ### Vim
 
 **Plugins**
