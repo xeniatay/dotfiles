@@ -89,8 +89,10 @@ ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 alias sshfs-488='sshfs xzytay@linux.student.cs.uwaterloo.ca:/u1/xzytay/cs488/ ~/projs/cs488' # CS 488
 
 # ssh
-alias ssh-cs='ssh xzytay@linux028.student.cs.uwaterloo.ca'
+alias ssh-cs='ssh xzytay@linux.student.cs.uwaterloo.ca'
 alias ssh-csx='ssh -X xzytay@linux.student.cs.uwaterloo.ca'
+alias ssh-ugster='ssh xzytay@ugster05.student.cs.uwaterloo.ca'
+alias sshfs-ugster='sshfs xzytay@ugster05.student.cs.uwaterloo.ca:/home/xzytay/uml ~/projs/cs458/sshfs' # CS 458
 
 # ARC
 export EDITOR="vim"
@@ -115,7 +117,5 @@ alias bmake-all='bmake depend; bmake; bmake install'
 # local static python server
 alias pyserver='python -m SimpleHTTPServer' # add portname to command e.g. pyserver 8888
 
-# export NVM_DIR="/Users/xenia/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
-nvm use 0.12.7
+export NVM_DIR="/Users/xenia/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
