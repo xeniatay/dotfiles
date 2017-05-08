@@ -4,7 +4,8 @@
 
 ### Install xcode and [homebrew](http://brew.sh/)
 
-    ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)"; \
+    # Go to the homebrew link
+    # After installing:
     brew doctor
 
 ### Install git
@@ -42,7 +43,7 @@
 
 **Install customized version of Vintageous**
 
-    cd ~/Library/Application Support/Sublime Text 3/Packages; \
+    cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages"; \
     git clone git@github.com:xeniatay/Vintageous.git; \
     cd Vintageous; \
     git checkout xeniatay; \
@@ -50,10 +51,12 @@
 
 *Enable 'subl' command in the terminal and enable press and hold for keys (like using j to scroll downnnn):*
 
-    sudo ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl \
+    sudo ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/subl
+    
+*Enable press and hold for keys (Vintageous) -- e.g. holding down j to scroll down:*
+ 
     defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
 
-[Migrating from ST2 to ST3] (http://wesbos.com/migrating-to-sublime-text-3/)
 
 **Install [Package Control](https://sublime.wbond.net/installation#Manual)**
 
@@ -81,6 +84,10 @@ We really just need `xeniatay.zsh-theme`
 **Themes**
 - [Molokai](https://github.com/tomasr/dotfiles/tree/master/.vim/colors)
 - [ir\_black](http://toddwerth.com/2011/07/21/the-original-ir_black-for-os-x-lion/)
+
+### Disable two-finger swipe back-and-forth on Chrome
+
+    defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
 
 ### Install [IE VMS](http://infoheap.com/run-ie-on-mac-virtualbox/)
 
