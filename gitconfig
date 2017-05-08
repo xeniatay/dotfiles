@@ -7,18 +7,26 @@
 	helper = osxkeychain
 [core]
     autocrlf = false
-	pager = less -F -X
+    pager = diff-so-fancy | less --tabs=2 -RFX
+#	pager = less -F -X
 #    pager = /usr/local/git/contrib/diff-highlight | less
 #    pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less -F -X # diff by on a character basis
 	excludesfile = /Users/xenia/.gitignore_global
 [color]
-  ui = auto # covers diff = true, status = auto, branch = auto
+  ui = always # covers diff = true, status = auto, branch = auto
   interactive = auto
 [color "diff"]
   meta = yellow bold
+  commit = green bold
   frag = magenta bold
   old = red bold
   new = green bold
+  whitespace = red reverse
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
 [color "branch"]
   current = yellow reverse
   local = yellow
@@ -28,16 +36,19 @@
   changed = green
   untracked = cyan
 [alias]
+  d = diff
   s = status
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   lg = log -p
   ds = !"git diff; git status;"
+  sd = !"git diff; git status;"
+  go = git-open
+  co = checkout
+  cob = checkout -b
 
   # From Aaron
   br = branch
   ci = commit
-  co = checkout
-  df = diff
   g = grep -I
   pb = publish-branch
   pp = !"echo 'Pull'; git pull; echo 'Push'; git push"
@@ -45,7 +56,6 @@
   rc = rank-contributors
   rv = review
   sm = show-merges
-  st = status
 [merge]
   log = true
 [rerere]
@@ -69,7 +79,7 @@
 	default = matching
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true

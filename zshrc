@@ -24,7 +24,7 @@ DISABLE_COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails git osx ruby brew gem grunt zsh-syntax-highlighting)
+plugins=(rails git osx ruby brew gem grunt zsh-syntax-highlighting git-open)
 
 # disable fecking autocorrect
 source $ZSH/oh-my-zsh.sh
@@ -34,22 +34,14 @@ unsetopt correct_all
 pathdirs=(
     /usr/local/bin
     /usr/local/sbin
-    /Users/Xenia.Tay/.nave/installed/0.6.11/bin
     ~/bin
     ~/sys161/tools/bin
     ~/sys161/bin
     /Applications/Postgres93.app/Contents/MacOS/bin
-    /usr/local/arcanist/bin # BP arcanist
     /opt/local/bin # BP MacPorts
     /opt/local/sbin # BP MacPorts
-    /Applications/maven/bin # BP maven
+    /Users/xenia/.pyenv/bin # PAT pyenv
 )
-
-for dir in $pathdirs; do
-    if [ -d $dir ]; then
-        path+=$dir
-    fi
-done
 
 #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 #. `brew --prefix`/etc/profile.d/z.sh
@@ -119,3 +111,13 @@ alias pyserver='python -m SimpleHTTPServer' # add portname to command e.g. pyser
 
 export NVM_DIR="/Users/xenia/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# Patreon
+alias cdpy='cd ~/projs/webdev/code/patreon_py'
+alias cdreact='cd ~/projs/webdev/code/patreon_react_features'
+alias cdang='cd ~/projs/webdev/code/patreon_webclient'
+
+# Python 3 venv stuff
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"

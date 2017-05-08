@@ -9,7 +9,9 @@
 
 ### Install git
 
-    brew install git
+    brew install git; \
+    npm install -g diff-so-fancy; \
+    npm install --global git-recent
 
 ### [Generate ssh key](https://help.github.com/articles/generating-ssh-keys)
 
