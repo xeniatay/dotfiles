@@ -41,6 +41,7 @@ pathdirs=(
     /opt/local/bin # BP MacPorts
     /opt/local/sbin # BP MacPorts
     /Users/xenia/.pyenv/bin # PAT pyenv
+    ./node_modules/.bin
 )
 
 #if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
@@ -72,6 +73,7 @@ bindkey -M viins 'jk' vi-cmd-mode
 # Aliases
 alias vgs='cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Vintageous'
 alias wp-themes='cd ~/projs/wordpress/wp-content/themes'
+alias chrome="open -a 'Google Chrome'"
 
 # ZSH syntax highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
@@ -113,11 +115,15 @@ export NVM_DIR="/Users/xenia/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Patreon
-alias cdpy='cd ~/projs/webdev/code/patreon_py'
-alias cdreact='cd ~/projs/webdev/code/patreon_react_features'
-alias cdang='cd ~/projs/webdev/code/patreon_webclient'
+alias cdp='cd ~/projs/webdev/code/patreon_py'
+alias cdr='cd ~/projs/webdev/code/patreon_react_features'
+alias cda='cd ~/projs/webdev/code/patreon_webclient'
+alias cds='cd ~/projs/patreon_smoketests'
 
 # Python 3 venv stuff
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# Prettier
+alias ptr='prettier --tab-width 4 --single-quote --trailing-comma all --no-semi --write '

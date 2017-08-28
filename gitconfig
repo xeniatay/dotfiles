@@ -12,6 +12,7 @@
 #    pager = /usr/local/git/contrib/diff-highlight | less
 #    pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less -F -X # diff by on a character basis
 	excludesfile = /Users/xenia/.gitignore_global
+	ignorecase = false
 [color]
   ui = always # covers diff = true, status = auto, branch = auto
   interactive = auto
@@ -40,11 +41,14 @@
   s = status
   l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
   lg = log -p
-  ds = !"git diff; git status;"
-  sd = !"git diff; git status;"
+  # ds = !"git diff; git status;"
+  # sd = !"git diff; git status;"
+  ds = !"git diff; git status; npm -s run lint || echo 'Did not lint.';"
+  sd = !"git diff; git status; npm -s run lint || echo 'Did not lint.';"
   go = git-open
   co = checkout
   cob = checkout -b
+  cot = !"git commit --allow-empty -m 'this is a test branch'"
 
   # From Aaron
   br = branch
