@@ -60,15 +60,15 @@
 
 **Install [Package Control](https://sublime.wbond.net/installation#Manual)**
 
+**Install Prettifier**
+`npm install -g prettifier`
+- Already installed in Sublime via Package Control
+
 ### zsh
 
 We really just need `xeniatay.zsh-theme`
 
 *Perhaps don't version control the whole dir?*
-
-### [JSCS](https://medium.com/@addyosmani/auto-formatting-javascript-code-style-fe0f98a923b8)
-
-    npm install -g jscs
 
 ### [git recent](https://github.com/paulirish/git-recent)
     
