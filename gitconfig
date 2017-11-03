@@ -6,13 +6,17 @@
 [credential]
 	helper = osxkeychain
 [core]
-    autocrlf = false
-    pager = diff-so-fancy | less --tabs=2 -RFX
-#	pager = less -F -X
-#    pager = /usr/local/git/contrib/diff-highlight | less
-#    pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less -F -X # diff by on a character basis
+  autocrlf = false
+  pager = diff-so-fancy | less --tabs=4 -RFX
+  pager = less --tabs=2 -RFX
 	excludesfile = /Users/xenia/.gitignore_global
 	ignorecase = false
+[pager]
+  log = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less --tabs=4 -RFX
+  show = diff-so-fancy | less --tabs=4 -RFX
+  diff = diff-so-fancy | less --tabs=4 -RFX
+#  pager = less -F -X
+#    pager = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less -F -X # diff by on a character basis
 [color]
   ui = always # covers diff = true, status = auto, branch = auto
   interactive = auto
@@ -43,8 +47,8 @@
   lg = log -p
   # ds = !"git diff; git status;"
   # sd = !"git diff; git status;"
-  ds = !"git diff; git status; npm -s run lint || echo 'Did not lint.';"
-  sd = !"git diff; git status; npm -s run lint || echo 'Did not lint.';"
+  ds = !"git diff; git status;"
+  sd = !"git diff; git status;"
   go = git-open
   co = checkout
   cob = checkout -b

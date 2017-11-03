@@ -115,10 +115,12 @@ export NVM_DIR="/Users/xenia/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Patreon
-alias cdp='cd ~/projs/webdev/code/patreon_py'
-alias cdr='cd ~/projs/webdev/code/patreon_react_features'
-alias cda='cd ~/projs/webdev/code/patreon_webclient'
-alias cds='cd ~/projs/patreon_smoketests'
+alias patw='cd ~/projs/webdev/'
+alias patwd='cd ~/projs/webdev/'
+alias patp='cd ~/projs/webdev/code/patreon_py'
+alias patr='cd ~/projs/webdev/code/patreon_react_features'
+alias pata='cd ~/projs/webdev/code/patreon_webclient'
+alias pats='cd ~/projs/patreon_smoketests'
 
 # Python 3 venv stuff
 export PYENV_ROOT="$HOME/.pyenv"
@@ -126,4 +128,6 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # Prettier
-alias ptr='prettier --tab-width 4 --single-quote --trailing-comma all --no-semi --write '
+alias ptr='git diff --name-only origin/master | grep -E '.jsx$' | xargs prettier --write --tab-width 4 --single-quote --trailing-comma all --no-semi'
+alias lint='ptr; git diff --name-only origin/master | grep -E '.jsx$' | xargs eslint -c .eslintrc.yml --max-warnings 0 --cache --fix'
+alias gds='git diff; git status; lint || "Did not lint."'

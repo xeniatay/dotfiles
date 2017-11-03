@@ -41,7 +41,7 @@ ZSH_THEME_GIT_PROMPT_AHEAD=" %{$RED%}(!)"
 ZSH_THEME_GIT_PROMPT_SHA_BEFORE=" %{$WHITE%}[%{$BLUE_BOLD%}"
 ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]"
 
-# Test Colours 
+# Test Colours
 #%{$RED%}colour
 #%{$YELLOW%}colour
 #%{$GREEN%}colour
@@ -55,8 +55,42 @@ ZSH_THEME_GIT_PROMPT_SHA_AFTER="%{$WHITE%}]"
 #%{$BLUE_BOLD%}colour
 #%{$CYAN_BOLD%}colour
 
+function emoji {
+  case "$1" in
+    1)
+      echo '(づ｡◕‿‿◕｡)づ'
+      ;;
+    2)
+      echo 'ᕦ(ò_óˇ)ᕤ'
+      ;;
+    3)
+      echo 'ᕙ(⇀‸↼‶)ᕗ'
+      ;;
+    4)
+      echo '┌(・。・)┘♪'
+      ;;
+    5)
+      echo 'ʅ（´◔౪◔）ʃ'
+      ;;
+    6)
+      echo '¯\(°_o)/¯'
+      ;;
+    7)
+      echo 'ヽ( ᐛ )و'
+      ;;
+    8)
+      echo 'ヽ(´ー｀)ノ'
+      ;;
+    9)
+      echo '༼ つ ◕_◕ ༽つ'
+      ;;
+    10)
+      echo '(☞ﾟヮﾟ)☞'
+      ;;
+  esac
+}
 # Prompt format
  PROMPT='
-%{$GREEN_BOLD%}%n%{$WHITE%} @ %{$RED_BOLD%}(づ｡◕‿‿◕｡)づ%{$WHITE%} %{$YELLOW%}%~%u$(parse_git_dirty)$(git_prompt_ahead)%{$RESET_COLOR%}
+%{$GREEN_BOLD%}%n%{$WHITE%} @ %{$RED_BOLD%}%{$(emoji "$(jot -r 1 1 9)")%}%{$WHITE%} %{$YELLOW%}%~%u$(parse_git_dirty)$(git_prompt_ahead)%{$RESET_COLOR%}
 %{$BLUE%}>%{$RESET_COLOR%} '
 RPROMPT='%{$GREEN_BOLD%}$(current_branch)$(git_prompt_short_sha)$(git_prompt_status)%{$GREEN_BOLD%} %!%{$BLUE_BOLD%} %*%{$RESET_COLOR%}'
