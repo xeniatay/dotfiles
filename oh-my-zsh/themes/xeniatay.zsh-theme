@@ -87,6 +87,10 @@ function emoji {
     10)
       echo '(☞ﾟヮﾟ)☞'
       ;;
+    11)
+      echo '✌︎('ω')✌︎'
+      ;;
+      
   esac
 }
 # Prompt format

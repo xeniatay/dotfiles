@@ -24,7 +24,7 @@ DISABLE_COMPLETION_WAITING_DOTS="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(rails git osx ruby brew gem grunt zsh-syntax-highlighting git-open)
+plugins=(rails git osx ruby brew gem grunt zsh-syntax-highlighting git-open zsh-autosuggestions)
 
 # disable fecking autocorrect
 source $ZSH/oh-my-zsh.sh
@@ -128,6 +128,14 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 # Prettier
-alias ptr='git diff --name-only origin/master | grep -E '.jsx$' | xargs prettier --write --tab-width 4 --single-quote --trailing-comma all --no-semi'
-alias lint='ptr; git diff --name-only origin/master | grep -E '.jsx$' | xargs eslint -c .eslintrc.yml --max-warnings 0 --cache --fix'
+alias ptr='git diff --name-only origin/master | grep -E \\.jsx?$ | xargs -t -n1 prettier --write --tab-width 4 --single-quote --trailing-comma all --no-semi'
+
+lint() { 
+     files="$(git diff --name-only origin/master | grep -E \\.jsx?$)"
+     echo $files
+     echo $files | xargs eslint -c .eslintrc.yml --max-warnings 0 --cache --ignore-pattern './prettier.rc' --fix
+}
+
 alias gds='git diff; git status; lint || "Did not lint."'
+export PATH="/usr/local/opt/icu4c/bin:$PATH"
+export PATH="/usr/local/opt/icu4c/sbin:$PATH"
