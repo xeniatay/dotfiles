@@ -53,6 +53,11 @@
   co = checkout
   cob = checkout -b
   cot = !"git commit --allow-empty -m 'this is a test branch'"
+  nvm = --no-verify -m
+
+  ignore = update-index --assume-unchanged
+  unignore = update-index --no-assume-unchanged
+  ignored = !git ls-files -v | grep "^[[:lower:]]"
 
   # From Aaron
   br = branch

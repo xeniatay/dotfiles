@@ -130,12 +130,13 @@ eval "$(pyenv init -)"
 # Prettier
 alias ptr='git diff --name-only origin/master | grep -E \\.jsx?$ | xargs -t -n1 prettier --write --tab-width 4 --single-quote --trailing-comma all --no-semi'
 
-lint() { 
+mylint() {
      files="$(git diff --name-only origin/master | grep -E \\.jsx?$)"
      echo $files
      echo $files | xargs eslint -c .eslintrc.yml --max-warnings 0 --cache --ignore-pattern './prettier.rc' --fix
 }
-
+alias lint='npm run lint:fix'
 alias gds='git diff; git status; lint || "Did not lint."'
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+alias tail-all='devx attach -- tail -f /var/log/upstart/devx-*.log'
