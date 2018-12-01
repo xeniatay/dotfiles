@@ -115,11 +115,10 @@ export NVM_DIR="/Users/xenia/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # Patreon
-alias patw='cd ~/projs/webdev/'
-alias patwd='cd ~/projs/webdev/'
-alias patp='cd ~/projs/webdev/code/patreon_py'
-alias patr='cd ~/projs/webdev/code/patreon_react_features'
-alias pata='cd ~/projs/webdev/code/patreon_webclient'
+alias patdevx='cd ~/projs/devx/'
+alias patp='cd ~/projs/devx/patreon_py'
+alias patr='cd ~/projs/devx/patreon_react_features'
+alias pata='cd ~/projs/devx/patreon_webclient'
 alias pats='cd ~/projs/patreon_smoketests'
 
 # Python 3 venv stuff
@@ -139,4 +138,4 @@ alias lint='npm run lint:fix'
 alias gds='git diff; git status; lint || "Did not lint."'
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
-alias tail-all='devx attach -- tail -f /var/log/upstart/devx-*.log'
+alias tail-all="devx-attach 'journalctl -o json -fu devx-* | jq -r \"[._SYSTEMD_UNIT, .MESSAGE] | @tsv\"'"
