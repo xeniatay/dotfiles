@@ -1,6 +1,11 @@
 ## Configurations for a fresh machine
 
+### Install [Spectacle](https://www.spectacleapp.com/)
 ### Install Evernote (App Store)
+### Install [1Password](https://1password.com/downloads/mac/)
+### Install [Visual Studio Code](https://code.visualstudio.com/)
+### Install [Iterm 2](http://www.iterm2.com/)
+### Install [Dropbox](https://dropbox.com/install)
 
 ### Install xcode and [homebrew](http://brew.sh/)
 
@@ -24,9 +29,9 @@
     cd dotfiles; \
     ./makesymlinks.sh
 
-### Install [Iterm 2](http://www.iterm2.com/)
+### Disable two-finger swipe back-and-forth on Chrome
 
-**Run the installer**
+    defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
 
 ### Install [Sublime Text 3](http://www.sublimetext.com/3)
 
@@ -70,10 +75,6 @@ We really just need `xeniatay.zsh-theme`
 
 *Perhaps don't version control the whole dir?*
 
-### [git recent](https://github.com/paulirish/git-recent)
-    
-    npm install --global git-recent
-
 ### Vim
 
 **Plugins**
@@ -84,10 +85,6 @@ We really just need `xeniatay.zsh-theme`
 **Themes**
 - [Molokai](https://github.com/tomasr/dotfiles/tree/master/.vim/colors)
 - [ir\_black](http://toddwerth.com/2011/07/21/the-original-ir_black-for-os-x-lion/)
-
-### Disable two-finger swipe back-and-forth on Chrome
-
-    defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool FALSE
 
 ### Install [IE VMS](http://infoheap.com/run-ie-on-mac-virtualbox/)
 
