@@ -40,7 +40,6 @@ pathdirs=(
     /Applications/Postgres93.app/Contents/MacOS/bin
     /opt/local/bin # BP MacPorts
     /opt/local/sbin # BP MacPorts
-    /Users/xenia/.pyenv/bin # PAT pyenv
     ./node_modules/.bin
 )
 
@@ -111,9 +110,6 @@ alias bmake-all='bmake depend; bmake; bmake install'
 # local static python server
 alias pyserver='python -m SimpleHTTPServer' # add portname to command e.g. pyserver 8888
 
-export NVM_DIR="/Users/xenia/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-
 # Patreon
 # alias patdevx='cd ~/projs/devx/'
 # alias patp='cd ~/projs/devx/patreon_py'
@@ -140,3 +136,5 @@ export NVM_DIR="/Users/xenia/.nvm"
 
 export PATH="/usr/local/opt/icu4c/bin:$PATH"
 export PATH="/usr/local/opt/icu4c/sbin:$PATH"
+
+alias temp='git commit --no-verify -am "temp"'
