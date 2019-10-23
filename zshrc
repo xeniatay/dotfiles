@@ -165,4 +165,3 @@ alias temp='git commit --no-verify -am "temp"'
 
 # Disable red dots displayed while waiting for completion
 # DISABLE_COMPLETION_WAITING_DOTS="true"
-

@@ -1,0 +1,193 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'i',
+1 verbose cli   '-g',
+1 verbose cli   'diff-so-fancy' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.39
+4 verbose cache add [ 'diff-so-fancy', null ]
+5 verbose cache add name=undefined spec="diff-so-fancy" args=["diff-so-fancy",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'diff-so-fancy',
+6 verbose parsed url   path: 'diff-so-fancy',
+6 verbose parsed url   href: 'diff-so-fancy' }
+7 silly lockFile 1a002c10-diff-so-fancy diff-so-fancy
+8 verbose lock diff-so-fancy /Users/xenia/.npm/1a002c10-diff-so-fancy.lock
+9 silly lockFile 1a002c10-diff-so-fancy diff-so-fancy
+10 silly lockFile 1a002c10-diff-so-fancy diff-so-fancy
+11 verbose addNamed [ 'diff-so-fancy', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 9454a7b6-diff-so-fancy diff-so-fancy@
+14 verbose lock diff-so-fancy@ /Users/xenia/.npm/9454a7b6-diff-so-fancy.lock
+15 silly addNameRange { name: 'diff-so-fancy', range: '*', hasData: false }
+16 verbose request where is /diff-so-fancy
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id f162ca17e469bd77
+19 verbose url raw /diff-so-fancy
+20 verbose url resolving [ 'https://registry.npmjs.org/', './diff-so-fancy' ]
+21 verbose url resolved https://registry.npmjs.org/diff-so-fancy
+22 verbose request where is https://registry.npmjs.org/diff-so-fancy
+23 info trying registry request attempt 1 at 02:30:57
+24 http GET https://registry.npmjs.org/diff-so-fancy
+25 http 200 https://registry.npmjs.org/diff-so-fancy
+26 silly registry.get cb [ 200,
+26 silly registry.get   { date: 'Wed, 23 Oct 2019 06:30:57 GMT',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'transfer-encoding': 'chunked',
+26 silly registry.get     connection: 'keep-alive',
+26 silly registry.get     'set-cookie': [ '__cfduid=d73515d9cdb198e1efb3e3a5eb0291f8e1571812257; expires=Thu, 22-Oct-20 06:30:57 GMT; path=/; domain=.npmjs.org; HttpOnly' ],
+26 silly registry.get     'cf-cache-status': 'REVALIDATED',
+26 silly registry.get     'cache-control': 'max-age=300',
+26 silly registry.get     'cf-ray': '52a1aa516e28cacc-YYZ',
+26 silly registry.get     etag: 'W/"a234235f6840ba88b655626b6242ae86"',
+26 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+26 silly registry.get     'last-modified': 'Wed, 28 Aug 2019 18:32:21 GMT',
+26 silly registry.get     vary: 'accept-encoding, accept',
+26 silly registry.get     'x-amz-meta-rev': '52-ee6b5c7812b1e4630842a0ae523d268a',
+26 silly registry.get     server: 'cloudflare',
+26 silly registry.get     'content-encoding': 'gzip' } ]
+27 silly addNameRange number 2 { name: 'diff-so-fancy', range: '*', hasData: true }
+28 silly addNameRange versions [ 'diff-so-fancy',
+28 silly addNameRange   [ '0.0.0',
+28 silly addNameRange     '0.1.0',
+28 silly addNameRange     '0.1.1',
+28 silly addNameRange     '0.1.2',
+28 silly addNameRange     '0.2.0',
+28 silly addNameRange     '0.2.1',
+28 silly addNameRange     '0.3.0',
+28 silly addNameRange     '0.4.0',
+28 silly addNameRange     '0.4.1',
+28 silly addNameRange     '0.5.0',
+28 silly addNameRange     '0.5.1',
+28 silly addNameRange     '0.5.2',
+28 silly addNameRange     '0.6.0',
+28 silly addNameRange     '0.6.1',
+28 silly addNameRange     '0.6.2',
+28 silly addNameRange     '0.6.3',
+28 silly addNameRange     '0.7.0',
+28 silly addNameRange     '0.7.1',
+28 silly addNameRange     '0.8.0',
+28 silly addNameRange     '0.9.0',
+28 silly addNameRange     '0.9.1',
+28 silly addNameRange     '0.9.2',
+28 silly addNameRange     '0.9.3',
+28 silly addNameRange     '0.10.0',
+28 silly addNameRange     '0.10.1',
+28 silly addNameRange     '0.11.0',
+28 silly addNameRange     '0.11.1',
+28 silly addNameRange     '0.11.2',
+28 silly addNameRange     '0.11.3',
+28 silly addNameRange     '0.11.4',
+28 silly addNameRange     '1.0.0',
+28 silly addNameRange     '1.1.1',
+28 silly addNameRange     '1.2.0',
+28 silly addNameRange     '1.2.5',
+28 silly addNameRange     '1.2.6',
+28 silly addNameRange     '1.2.7' ] ]
+29 verbose addNamed [ 'diff-so-fancy', '1.2.7' ]
+30 verbose addNamed [ '1.2.7', '1.2.7' ]
+31 silly lockFile a5d523d5-diff-so-fancy-1-2-7 diff-so-fancy@1.2.7
+32 verbose lock diff-so-fancy@1.2.7 /Users/xenia/.npm/a5d523d5-diff-so-fancy-1-2-7.lock
+33 silly lockFile 7a38cb7f-so-fancy-diff-so-fancy-1-2-7-tgz https://registry.npmjs.org/diff-so-fancy/-/diff-so-fancy-1.2.7.tgz
+34 verbose lock https://registry.npmjs.org/diff-so-fancy/-/diff-so-fancy-1.2.7.tgz /Users/xenia/.npm/7a38cb7f-so-fancy-diff-so-fancy-1-2-7-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/diff-so-fancy/-/diff-so-fancy-1.2.7.tgz',
+35 verbose addRemoteTarball   '8582d79c08de91d174dbc7da1ec51169fbce0ae1' ]
+36 info retry fetch attempt 1 at 02:30:57
+37 verbose fetch to= /var/folders/lz/9nfqw9q9321f25lpvdb4kyf00000gn/T/npm-12044-ZRHTdS81/registry.npmjs.org/diff-so-fancy/-/diff-so-fancy-1.2.7.tgz
+38 http GET https://registry.npmjs.org/diff-so-fancy/-/diff-so-fancy-1.2.7.tgz
+39 http 200 https://registry.npmjs.org/diff-so-fancy/-/diff-so-fancy-1.2.7.tgz
+40 silly lockFile 7a38cb7f-so-fancy-diff-so-fancy-1-2-7-tgz https://registry.npmjs.org/diff-so-fancy/-/diff-so-fancy-1.2.7.tgz
+41 silly lockFile 7a38cb7f-so-fancy-diff-so-fancy-1-2-7-tgz https://registry.npmjs.org/diff-so-fancy/-/diff-so-fancy-1.2.7.tgz
+42 silly lockFile a5d523d5-diff-so-fancy-1-2-7 diff-so-fancy@1.2.7
+43 silly lockFile a5d523d5-diff-so-fancy-1-2-7 diff-so-fancy@1.2.7
+44 silly lockFile 9454a7b6-diff-so-fancy diff-so-fancy@
+45 silly lockFile 9454a7b6-diff-so-fancy diff-so-fancy@
+46 silly resolved [ { name: 'diff-so-fancy',
+46 silly resolved     version: '1.2.7',
+46 silly resolved     description: 'Good-lookin\' diffs with diff-highlight and more',
+46 silly resolved     bin: { 'diff-so-fancy': 'diff-so-fancy' },
+46 silly resolved     scripts: { test: 'bats test' },
+46 silly resolved     repository:
+46 silly resolved      { type: 'git',
+46 silly resolved        url: 'git+https://github.com/so-fancy/diff-so-fancy.git' },
+46 silly resolved     keywords:
+46 silly resolved      [ 'git',
+46 silly resolved        'diff',
+46 silly resolved        'fancy',
+46 silly resolved        'good-lookin\'',
+46 silly resolved        'diff-highlight',
+46 silly resolved        'color',
+46 silly resolved        'readable',
+46 silly resolved        'highlight' ],
+46 silly resolved     author: { name: 'Paul Irish' },
+46 silly resolved     license: 'MIT',
+46 silly resolved     bugs: { url: 'https://github.com/so-fancy/diff-so-fancy/issues' },
+46 silly resolved     homepage: 'https://github.com/so-fancy/diff-so-fancy#readme',
+46 silly resolved     gitHead: 'ac3ea382cad012cc10e057034c3c3f78d26372a0',
+46 silly resolved     _id: 'diff-so-fancy@1.2.7',
+46 silly resolved     _nodeVersion: '12.4.0',
+46 silly resolved     _npmVersion: '6.9.0',
+46 silly resolved     dist:
+46 silly resolved      { integrity: 'sha512-ViY4UdNs5IRfVl/5wS/XuYrggZr9K607OyYzVhayW9Z4X19/WGd9F8vIBA3ANA57Ot4UAq23UraTQXOPouOM3Q==',
+46 silly resolved        shasum: '8582d79c08de91d174dbc7da1ec51169fbce0ae1',
+46 silly resolved        tarball: 'https://registry.npmjs.org/diff-so-fancy/-/diff-so-fancy-1.2.7.tgz',
+46 silly resolved        fileCount: 80,
+46 silly resolved        unpackedSize: 245659,
+46 silly resolved        'npm-signature': '-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJdZsixCRA9TVsSAnZWagAASvUP/0lTZUan79XH6wDmoTL8\nH+3auKQt98IAXn0WcmNYJCXduXAqSCrrm3lndlz90b3DHSfnzOAlWhNj8dJV\n34AmGPphIlvvbfbsyYfxl/EANK6MaYlaCwIRVTDiE8GaZwZtdVU3aRylrvvF\nVWfIJY1Ub602PlOkX6Twrqz9eWVAVVoWvKMNhkIflP9x0B5+3qTnr2iljdDE\nE/03I2d1wZ6ExtZ2qXrpps2CY/xCtc4lWHjakEk9xfFwUrCguAeUbX5yDu9C\n1TeQ0NP8Q6mXKkmdmmdIHO4kdhmXP5g35vHaS2FZmnlcV9BDJenbmS2OhM/Z\nFh0EZQANA0mIP50lcCiS4dSoXpT+TpfhqmRkY2/bDz20S/2S+RV5z49Bteg3\n3pMroZ8R/DvlA50ifMNEvGu12DKYAf4uS6EBZSVRn48b5fS/oWjYhCNOPr1G\nO3fpSfTvJaPse+pAAWT5RYh3ut3NH6oe7oUlrdVcZFX2kj9oQjiFMXRadAKc\nahrwfvcrv/5oq6Rs7O1CnvYU0oiPvI1GV46M3vd3rYxm4W9Di7Ie+V60spLR\ncofAbaZ3hXkQ6HYUeX80x5wWa/KVk5ww1LwpK0iNiP2m5wTxOH+rdTvF6mpJ\nQoSgUGdWs4V6wWlamHIyiLr+lx2pxgz0c4JlIRG2fZO75b8YXDb3OMuoOLPK\ntTUz\r\n=N42w\r\n-----END PGP SIGNATURE-----\r\n' },
+46 silly resolved     maintainers: [ [Object], [Object] ],
+46 silly resolved     _npmUser: { name: 'paulirish', email: 'paul.irish@gmail.com' },
+46 silly resolved     directories: {},
+46 silly resolved     _npmOperationalInternal:
+46 silly resolved      { host: 's3://npm-registry-packages',
+46 silly resolved        tmp: 'tmp/diff-so-fancy_1.2.7_1567017137210_0.5757852267458596' },
+46 silly resolved     _hasShrinkwrap: false,
+46 silly resolved     _shasum: '8582d79c08de91d174dbc7da1ec51169fbce0ae1',
+46 silly resolved     _from: 'diff-so-fancy@',
+46 silly resolved     _resolved: 'https://registry.npmjs.org/diff-so-fancy/-/diff-so-fancy-1.2.7.tgz' } ]
+47 info install diff-so-fancy@1.2.7 into /usr/local/lib
+48 info installOne diff-so-fancy@1.2.7
+49 verbose lib/node_modules/diff-so-fancy unbuild
+50 verbose tar unpack /Users/xenia/.npm/diff-so-fancy/1.2.7/package.tgz
+51 silly lockFile 4de0e9c4-l-lib-node-modules-diff-so-fancy tar:///usr/local/lib/node_modules/diff-so-fancy
+52 verbose lock tar:///usr/local/lib/node_modules/diff-so-fancy /Users/xenia/.npm/4de0e9c4-l-lib-node-modules-diff-so-fancy.lock
+53 silly lockFile c7bac5f0--diff-so-fancy-1-2-7-package-tgz tar:///Users/xenia/.npm/diff-so-fancy/1.2.7/package.tgz
+54 verbose lock tar:///Users/xenia/.npm/diff-so-fancy/1.2.7/package.tgz /Users/xenia/.npm/c7bac5f0--diff-so-fancy-1-2-7-package-tgz.lock
+55 silly gunzTarPerm modes [ '755', '644' ]
+56 error Error: EACCES, mkdir '/usr/local/lib/node_modules/diff-so-fancy'
+56 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/diff-so-fancy']
+56 error   errno: 3,
+56 error   code: 'EACCES',
+56 error   path: '/usr/local/lib/node_modules/diff-so-fancy',
+56 error   fstream_type: 'Directory',
+56 error   fstream_path: '/usr/local/lib/node_modules/diff-so-fancy',
+56 error   fstream_class: 'DirWriter',
+56 error   fstream_stack:
+56 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+56 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+56 error      'Object.oncomplete (fs.js:108:15)' ] }
+57 error Please try running this command again as root/Administrator.
+58 error System Darwin 18.2.0
+59 error command "/usr/local/bin/node" "/usr/local/bin/npm" "i" "-g" "diff-so-fancy"
+60 error cwd /Users/xenia/dotfiles
+61 error node -v v0.10.39
+62 error npm -v 1.4.28
+63 error path /usr/local/lib/node_modules/diff-so-fancy
+64 error fstream_path /usr/local/lib/node_modules/diff-so-fancy
+65 error fstream_type Directory
+66 error fstream_class DirWriter
+67 error code EACCES
+68 error errno 3
+69 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/diff-so-fancy'
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+70 error fstream_stack Object.oncomplete (fs.js:108:15)
+71 verbose exit [ 3, true ]
