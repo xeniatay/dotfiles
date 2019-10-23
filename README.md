@@ -61,6 +61,12 @@
 *Enable press and hold for keys (Vintageous) -- e.g. holding down j to scroll down:*
  
     defaults write com.sublimetext.3 ApplePressAndHoldEnabled -bool false
+    defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+
+*Settings > Keyboard*
+
+    Key Repeat: fast
+    Delay Until Repeat: Short
 
 
 **Install [Package Control](https://sublime.wbond.net/installation#Manual)**
