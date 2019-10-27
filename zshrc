@@ -13,7 +13,7 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 
 # oh-my-zsh plugins
-plugins=(rails git osx ruby brew gem grunt zsh-syntax-highlighting git-open zsh-autosuggestions)
+plugins=(rails git osx ruby brew gem grunt zsh-syntax-highlighting git-open zsh-autosuggestions history-substring-search)
 
 pathdirs=(
     /usr/local/bin
@@ -165,3 +165,14 @@ alias temp='git commit --no-verify -am "temp"'
 
 # Disable red dots displayed while waiting for completion
 # DISABLE_COMPLETION_WAITING_DOTS="true"
+
+# Fix for zsh autosuggestions being the same color as active command. This makes it YELLOW
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=3'
+
+# load nvm
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+# Keybindings to search through command history using arrow keys for existing prompt text
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
