@@ -13,7 +13,7 @@
 	excludesfile = /Users/xenia/.gitignore_global
 	ignorecase = false
 [pager]
-  log = `brew --prefix git`/share/git-core/contrib/diff-highlight/diff-highlight | less --tabs=4 -RFX
+#  log = `log | less --tabs=4 -RFX
   show = diff-so-fancy | less --tabs=4 -RFX
   diff = diff-so-fancy | less --tabs=4 -RFX
 #  pager = less -F -X
