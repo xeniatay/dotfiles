@@ -90,9 +90,7 @@ _Settings > Keyboard_
 
 ### zsh
 
-We really just need `xeniatay.zsh-theme`
-
-_Perhaps don't version control the whole dir?_
+Definitely need .oh-my-zsh (contains all the super important plugins, and my custom theme xeniatay.zsh-theme)
 
 ### Vim
 
