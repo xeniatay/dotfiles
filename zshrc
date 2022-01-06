@@ -176,3 +176,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # Keybindings to search through command history using arrow keys for existing prompt text
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
+
+# idk what this does lol from g
+setopt histignorealldups sharehistory
