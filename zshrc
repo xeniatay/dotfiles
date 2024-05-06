@@ -1,35 +1,91 @@
-### 19-01-08
-
-## SETUP
-
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load from ~/.oh-my-zsh/themes/
 export ZSH_THEME="xeniatay"
 
+## START OF FROM G
+
+## SETUP
+# plugins=(
+#   fig
+# )
+# appends fig to plugins from above
+plugins=(rails git osx ruby brew gem grunt zsh-syntax-highlighting git-open zsh-autosuggestions history-substring-search fig)
+
+
+# Enable g4d and hg
+source /etc/bash_completion.d/hgd
+
+# Enable fig status for zsh prompt
+source /google/src/head/depot/google3/experimental/fig_contrib/prompts/fig_status/zsh/fig_prompt
+
+# MINE
+
+# Restart codeserver vscode (chromOS)
+alias vscode-restart='systemctl --user restart code-server'
+
+# PATH additions
+export PATH="$HOME/bin:$PATH" # https://g3doc.corp.google.com/company/teams/eng-resources/zsh/index.md?cl=head
+export PATH=$PATH:~/.npm-global/bin # Node installation https://g3doc.corp.google.com/devtools/editors/vscode/google3_ext/README.md?cl=head
+
+# diff-so-fancy with p4/citc
+export PATH="$HOME/scripts/diff-so-fancy:$PATH"
+export P4DIFF="sh -c 'git diff --color \$0 \$1 | diff-so-fancy'"
+export CITCTOOLS_DIFF="sh -c 'git diff --color \$0 \$1 | diff-so-fancy'"
+
+# Neos
+alias source-devsite='source /google/src/head/depot/google3/devsite/two/tools/aliases.sh'
+if source-devsite ; then
+  : # echo 'DevSite aliases are available.'
+else
+  echo 'Sourcing DevSite failed; run gcert, then source-devsite.'
+fi
+
+# Quick switch to blaze-bin and back
+function bb() {
+  if [[ $PWD =~ ^(.*)blaze-bin(.*)$ ]]; then
+    cd "${BASH_REMATCH[1]}${BASH_REMATCH[2]}"
+  else
+    cd "${PWD/\/google3//google3/blaze-bin}"
+  fi
+}
+### END FROM G
+
+
+
+### 19-01-08 - FROM GITHUB-------------------------------
+
+## SETUP
+
+
 # Syntax highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS+=('rm -rf *' 'fg=white,bold,bg=red')
 
+# commented out for G
 # oh-my-zsh plugins
-plugins=(rails git osx ruby brew gem grunt zsh-syntax-highlighting git-open zsh-autosuggestions history-substring-search)
+# plugins=(rails git osx ruby brew gem grunt zsh-syntax-highlighting git-open zsh-autosuggestions history-substring-search)
 
-pathdirs=(
-    /usr/local/bin
-    /usr/local/sbin
-    ~/bin
-    ~/sys161/tools/bin
-    ~/sys161/bin
-    /Applications/Postgres93.app/Contents/MacOS/bin
-    /opt/local/bin # BP MacPorts
-    /opt/local/sbin # BP MacPorts
-    ./node_modules/.bin
-    /usr/local/opt/icu4c/bin:$PATH
-    /usr/local/opt/icu4c/sbin:$PATH
-)
+# Commented out for G
+# pathdirs=(
+#     /usr/local/bin
+#     /usr/local/sbin
+#     ~/bin
+#     ~/sys161/tools/bin
+#     ~/sys161/bin
+#     /Applications/Postgres93.app/Contents/MacOS/bin
+#     /opt/local/bin # BP MacPorts
+#     /opt/local/sbin # BP MacPorts
+#     ./node_modules/.bin
+#     /usr/local/opt/icu4c/bin:$PATH
+#     /usr/local/opt/icu4c/sbin:$PATH
+# )
 
 ## ZSH OPTIONS
+
+# disable oh my zsh auto update prompt
+DISABLE_AUTO_UPDATE="true"
 
 # disable zsh autocorrect prompts, it is so annoying!
 source $ZSH/oh-my-zsh.sh
@@ -50,7 +106,7 @@ bindkey -M viins 'jk' vi-cmd-mode
 ## Aliases
 
 # local static python server. add portname to command e.g. pyserver 8888
-alias pyserver='python -m SimpleHTTPServer' 
+alias pyserver='python -m SimpleHTTPServer'
 
 # quick nav to directories
 alias vgs='cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/Vintageous'
@@ -95,7 +151,7 @@ alias temp='git commit --no-verify -am "temp"'
 # fi
 
 # Autocomplete
-# commented out on 190108 
+# commented out on 190108
 # _my_cpl() {
 #     reply=(one two other possibility)
 # }
@@ -103,7 +159,7 @@ alias temp='git commit --no-verify -am "temp"'
 # zstyle ':completion:*' menu select
 
 # Fixes slow git autocompletion
-# commented out on 190108 
+# commented out on 190108
 # __git_files () {
 #     _wanted files expl 'local files' _files
 # }
@@ -112,7 +168,7 @@ alias temp='git commit --no-verify -am "temp"'
 # alias sshfs-488='sshfs xzytay@linux.student.cs.uwaterloo.ca:/u1/xzytay/cs488/ ~/projs/cs488' # CS 488
 
 # ssh
-# commented out on 190108 
+# commented out on 190108
 # alias ssh-cs='ssh xzytay@linux.student.cs.uwaterloo.ca'
 # alias ssh-csx='ssh -X xzytay@linux.student.cs.uwaterloo.ca'
 # alias ssh-ugster='ssh xzytay@ugster05.student.cs.uwaterloo.ca'
@@ -120,7 +176,7 @@ alias temp='git commit --no-verify -am "temp"'
 
 
 # history search backwards and forwards
-# commented out on 190108 
+# commented out on 190108
 # bindkey '\eOA' history-beginning-search-backward
 # bindkey '\e[A' history-beginning-search-backward
 # bindkey '\eOB' history-beginning-search-forward
@@ -128,11 +184,11 @@ alias temp='git commit --no-verify -am "temp"'
 # bindkey "^R" history-incremental-pattern-search-backward
 
 # bones less
-# commented out on 190108 
+# commented out on 190108
 # alias less-wp='lessc -w less/style.less css/style.css'
 
 # CS 350
-# commented out on 190108 
+# commented out on 190108
 # alias conf-asst2='cd ~/projs/os161-group/os161-1.99/kern/conf; ./config ASST2'
 # alias bmake-all='bmake depend; bmake; bmake install'
 
@@ -179,3 +235,5 @@ bindkey "^[[B" history-substring-search-down
 
 # idk what this does lol from g
 setopt histignorealldups sharehistory
+### 19-01-08 - END FROM GITHUB-------------------------------
+
