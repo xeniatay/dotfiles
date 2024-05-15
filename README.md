@@ -34,10 +34,14 @@
     cd dotfiles; \
     ./makesymlinks.sh
 
-### Clone the zsh autosuggestions plugin into the zsh plugins directory
+### Install oh-my-zsh, custom theme, and plugins
 
-[git clone https://github.com/zsh-users/zsh-autosuggestions \${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-](https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md#oh-my-zsh)
+```
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+cp oh-my-zsh/themes/xeniatay.zsh-theme .oh-my-zsh/custom/themes/. # cp from wherever the github dotfiles are
+```
 
 ### Install diff-so-fancy
     npm i -g diff-so-fancy
