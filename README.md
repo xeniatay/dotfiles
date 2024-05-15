@@ -36,12 +36,13 @@
 
 ### Install oh-my-zsh, custom theme, and plugins
 
-```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-cp oh-my-zsh/themes/xeniatay.zsh-theme .oh-my-zsh/custom/themes/. # cp from wherever the github dotfiles are
-```
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"; \
+    git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions; \
+    git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
+#### Copy zsh theme from dotfiles
+
+    cp dotfiles/xeniatay.zsh-theme .oh-my-zsh/custom/themes/. 
 
 ### Install diff-so-fancy
     npm i -g diff-so-fancy
