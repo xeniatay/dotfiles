@@ -1,18 +1,23 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
+# Would you like to use another custom folder than $ZSH/custom?
+ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
+
 # Set name of the theme to load from ~/.oh-my-zsh/themes/
 export ZSH_THEME="xeniatay"
 
 ## START OF FROM G
 
 ## SETUP
-# plugins=(
-#   fig
-# )
-# appends fig to plugins from above
-plugins=(rails git osx ruby brew gem grunt zsh-syntax-highlighting git-open zsh-autosuggestions history-substring-search fig)
-
+# oh-my-zsh plugins - commented out used stuff in g
+  # rails
+  # git
+  # osx
+  # ruby
+  # gem
+  # git-open
+plugins=(brew grunt history-substring-search fig zsh-syntax-highlighting zsh-autosuggestions)
 
 # Enable g4d and hg
 source /etc/bash_completion.d/hgd
