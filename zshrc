@@ -17,13 +17,7 @@ export ZSH_THEME="xeniatay"
   # ruby
   # gem
   # git-open
-plugins=(brew grunt history-substring-search fig zsh-syntax-highlighting zsh-autosuggestions)
-
-# Enable g4d and hg
-source /etc/bash_completion.d/hgd
-
-# Enable fig status for zsh prompt
-source /google/src/head/depot/google3/experimental/fig_contrib/prompts/fig_status/zsh/fig_prompt
+plugins=(brew git grunt history-substring-search zsh-syntax-highlighting zsh-autosuggestions)
 
 # MINE
 
@@ -38,14 +32,6 @@ export PATH=$PATH:~/.npm-global/bin # Node installation https://g3doc.corp.googl
 export PATH="$HOME/scripts/diff-so-fancy:$PATH"
 export P4DIFF="sh -c 'git diff --color \$0 \$1 | diff-so-fancy'"
 export CITCTOOLS_DIFF="sh -c 'git diff --color \$0 \$1 | diff-so-fancy'"
-
-# Neos
-alias source-devsite='source /google/src/head/depot/google3/devsite/two/tools/aliases.sh'
-if source-devsite ; then
-  : # echo 'DevSite aliases are available.'
-else
-  echo 'Sourcing DevSite failed; run gcert, then source-devsite.'
-fi
 
 # Quick switch to blaze-bin and back
 function bb() {
