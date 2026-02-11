@@ -42,7 +42,7 @@
 
 #### Copy zsh theme from dotfiles
 
-    cp dotfiles/xeniatay.zsh-theme .oh-my-zsh/custom/themes/. 
+    cp ~/dotfiles/xeniatay.zsh-theme ~/.oh-my-zsh/themes/. 
 
 ### Install diff-so-fancy
     npm i -g diff-so-fancy
